@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "722958357667",
+    "project_id": "mednote-61f9f",
+    "storage_bucket": "mednote-61f9f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:722958357667:android:56924cb299cb59116edb16",
+        "android_client_info": {
+          "package_name": "com.gaspi.MedNote"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABYS87KzMfD-BduTGK9PyFGP2uh561R-k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

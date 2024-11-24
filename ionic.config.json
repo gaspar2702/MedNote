@@ -1,0 +1,7 @@
+{
+  "name": "MedNote",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Bienvenido</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <!-- Contenedor de Bienvenida -->
+  <div class="welcome-container ion-text-center">
+    <h1>Bienvenido a <strong>MedNote</strong></h1>
+    <p>La aplicación compañera de su salud.</p>
+    <img src="assets/images/MedNoteLogo.png" alt="Logo MedNote" class="logo" />
+  </div>
+
+  <!-- Botones de Selección -->
+  <div class="role-buttons-container ion-margin-top">
+    <ion-button expand="block" shape="round" color="primary" (click)="goToLogin('profesional')">
+      <ion-icon name="briefcase" slot="start"></ion-icon>
+      Soy Profesional
+    </ion-button>
+
+    <ion-button expand="block" shape="round" color="secondary" (click)="goToLogin('paciente')">
+      <ion-icon name="person" slot="start"></ion-icon>
+      Soy Paciente
+    </ion-button>
+  </div>
+</ion-content>

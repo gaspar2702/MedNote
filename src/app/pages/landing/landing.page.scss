@@ -1,0 +1,118 @@
+
+body, ion-content {
+  --ion-background-color: #1A1D24; 
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+ion-header {
+  --background: #283347; 
+  --color: #ffffff;
+}
+
+ion-toolbar {
+  --background: #32405A; 
+}
+
+ion-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+.logo-container {
+  margin-top: 2rem;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+  border-radius: 10px;
+  background-color: #ffffff;
+  padding: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.welcome-container h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.welcome-container p {
+  font-size: 1rem;
+  color: #BFC8D2; 
+}
+
+
+ion-card {
+  --background: #2C3E50; 
+  --color: #E6E6E6;
+  margin: 1rem 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+ion-card-header {
+  background-color: #3A4B61; 
+  color: #ffffff;
+  padding: 0.8rem 1rem;
+  border-radius: 12px 12px 0 0;
+}
+
+ion-card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+th, td {
+  text-align: left;
+  padding: 0.8rem;
+  border-bottom: 1px solid #555E6C; 
+}
+
+th {
+  background-color: #3A4B61; 
+  color: #ffffff;
+  font-weight: bold;
+}
+
+td {
+  color: #E6E6E6;
+}
+
+tr:hover {
+  background-color: #43556A; 
+}
+
+
+ion-progress-bar {
+  --progress-background: #3A4B61;
+  --background: #5C85D6;
+}
+
+
+@media (max-width: 768px) {
+  .welcome-container h2 {
+    font-size: 1.5rem;
+  }
+  .welcome-container p {
+    font-size: 0.9rem;
+  }
+  ion-card-title {
+    font-size: 1rem;
+  }
+}

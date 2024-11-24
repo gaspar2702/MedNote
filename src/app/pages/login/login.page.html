@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Iniciar Sesión</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Bienvenido</ion-card-title>
+      <ion-card-subtitle>Por favor, ingresa tus credenciales o crea una cuenta.</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <form (ngSubmit)="login()" #loginForm="ngForm">
+        <ion-item>
+          <ion-input 
+            placeholder="Ingresa tu correo" 
+            type="email" 
+            clear-input 
+            [(ngModel)]="email" 
+            name="email" 
+            required>
+          </ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input 
+            placeholder="Ingresa tu contraseña" 
+            type="password" 
+            [(ngModel)]="password" 
+            name="password" 
+            required>
+            <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+          </ion-input>
+        </ion-item>
+
+        <ion-button 
+          expand="block" 
+          shape="round" 
+          class="ion-margin-top" 
+          type="submit" 
+          [disabled]="!loginForm.valid">
+          Ingresar
+        </ion-button>
+
+        <ion-button 
+          expand="block" 
+          shape="round" 
+          class="ion-margin-top" 
+          size="small" 
+          fill="outline" 
+          (click)="redirectToSignup()">
+          Crear cuenta
+        </ion-button>
+
+        <ion-text color="primary" (click)="redirectToResetPassword()" class="forgot-password ion-margin-top">
+          Olvidé mi contraseña
+        </ion-text>
+      </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
