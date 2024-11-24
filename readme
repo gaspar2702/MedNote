@@ -1,1 +1,10 @@
-rama de entrega
+Este es el programa base, para el funcionamiento completo se debe instalar lo necesario con
+"npm install"
+(debes tener ionic angular instalado de manera previa al la instalacion de npm)
+
+eso debería generar lo necesario para el entorno de funcionamiento
+luego se debe iniciar la base de datos con el comando
+"json-server db.json"
+
+para luego iniciar la aplicacion de manera web con 
+"ionic serve"

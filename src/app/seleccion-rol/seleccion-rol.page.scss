@@ -1,0 +1,58 @@
+
+ion-header {
+  --background: #004c8c; 
+  --color: #ffffff;
+}
+
+.welcome-container h1 {
+  font-size: 1.8rem;
+  color: #004c8c; 
+  margin-bottom: 10px;
+}
+
+.welcome-container p {
+  font-size: 1.2rem;
+  color: #666666; 
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+  margin: 0 auto;
+}
+
+
+.role-buttons-container ion-button {
+  --border-radius: 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 10px;
+  --padding-start: 15px;
+  --padding-end: 15px;
+}
+
+ion-button[color="primary"] {
+  --background: #004c8c; 
+  --color: #ffffff;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+ion-button[color="primary"]:hover {
+  --background: #003366;
+}
+
+ion-button[color="secondary"] {
+  --background: #0078D7; 
+  --color: #ffffff;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+ion-button[color="secondary"]:hover {
+  --background: #005bb5; 
+}
+
+ion-icon {
+  font-size: 1.2rem;
+  margin-right: 8px;
+}

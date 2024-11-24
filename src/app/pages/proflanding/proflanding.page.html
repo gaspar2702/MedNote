@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Bienvenido, {{ userName }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <!-- Formulario de Paciente -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Formulario de Paciente</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating">Nombre del Paciente</ion-label>
+        <ion-input [(ngModel)]="patientData.name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Correo del Paciente</ion-label>
+        <ion-input [(ngModel)]="patientData.email" type="email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Hora de la Próxima Cita</ion-label>
+        <ion-input [(ngModel)]="patientData.appointmentTime" type="time"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Fecha de la Próxima Cita</ion-label>
+        <ion-input [(ngModel)]="patientData.appointmentDate" type="date"></ion-input>
+      </ion-item>
+
+      <div class="form-buttons">
+        <ion-button expand="block" shape="round" color="primary" (click)="onCreate()">
+          {{ isEditing ? 'Actualizar Paciente' : 'Crear Paciente' }}
+        </ion-button>
+        <ion-button expand="block" shape="round" fill="outline" color="medium" (click)="resetForm()" *ngIf="isEditing">
+          Cancelar
+        </ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Lista de Pacientes -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Lista de Pacientes</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item-group>
+          <ion-item-divider>
+            <ion-label>Pacientes Registrados</ion-label>
+          </ion-item-divider>
+          <ion-item *ngFor="let patient of patients">
+            <ion-label>
+              <h2>{{ patient.name }}</h2>
+              <p><strong>Correo:</strong> {{ patient.email }}</p>
+              <p><strong>Hora:</strong> {{ patient.appointmentTime }}</p>
+              <p><strong>Fecha:</strong> {{ patient.appointmentDate }}</p>
+            </ion-label>
+            <ion-buttons slot="end">
+              <ion-button color="primary" (click)="onModify(patient)">Modificar</ion-button>
+              <ion-button color="danger" (click)="onDelete(patient.id)">Eliminar</ion-button>
+            </ion-buttons>
+          </ion-item>
+        </ion-item-group>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

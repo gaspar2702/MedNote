@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Bienvenido</ion-title>
+    <ion-progress-bar type="indeterminate"></ion-progress-bar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="logo-container ion-text-center">
+    <img src="assets/images/MedNoteLogo.png" alt="MedNote Logo" class="logo"/>
+  </div>
+
+  <div class="welcome-container ion-text-center ion-margin-top">
+    <h2>Hola, {{ userName }}!</h2>
+    <p>Nos alegra verte de nuevo.</p>
+  </div>
+
+
+  <ion-card *ngIf="patients.length > 0">
+    <ion-card-header>
+      <ion-card-title>Citas Programadas</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <table>
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Fecha</th>
+            <th>Hora</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let patient of patients">
+            <td>{{ patient.name }}</td>
+            <td>{{ patient.appointmentDate | date }}</td>
+            <td>{{ patient.appointmentTime }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </ion-card-content>
+  </ion-card>
+
+
+  <ion-card *ngIf="patients.length === 0">
+    <ion-card-header>
+      <ion-card-title>No tienes citas programadas</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>No tienes citas registradas en nuestra base de datos.</p>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
+
